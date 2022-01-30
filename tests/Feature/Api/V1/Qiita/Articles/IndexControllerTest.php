@@ -22,14 +22,7 @@ class IndexControllerTest extends TestCase
     # TODO 問3
     public function test_get_request()
     {
-        $this->assertEquals(QiitaArticle::all()->count(), 0);
-        $response = $this->get('/api/api/v1/qiita/articles');
-        $this->assertEquals(QiitaArticle::all()->count(), 9);
-        $response->assertStatus(Response::HTTP_CREATED);
-        $response->assertExactJson([
-            "message" => "create success",
-            "status" => Response::HTTP_CREATED,
-        ]);
+        # ここを実装してください
     }
 
     public function test_return_value_when_request_success()
@@ -56,16 +49,6 @@ class IndexControllerTest extends TestCase
     {
         # TODO 問3 テスト実装部分
         # 上のtest_return_value_when_request_successを参考にMockeryを使いテストを書いてください
-        $mock = Mockery::mock(GetQiitaArticles::class);
-        $mock->shouldReceive('execute')
-            ->andThrow(new \Exception("error", 500));
-        $this->instance(GetQiitaArticles::class, $mock);
-        $response = $this->get('/api/api/v1/qiita/articles');
-
-        $response->assertStatus(Response::HTTP_INTERNAL_SERVER_ERROR);
-        $response->assertExactJson([
-            "message" => "error",
-            "status" => Response::HTTP_INTERNAL_SERVER_ERROR,
-        ]);
+        # ここを実装してください
     }
 }

@@ -37,10 +37,7 @@ class GetQiitaArticles implements GetQiitaArticlesInterface
         # tokenは別途お渡しします
         # Http ClientとしてはGuzzleを使ってください
         # 参考: https://readouble.com/laravel/8.x/ja/http-client.html
-        $response = Http::withToken(env('QIITA_TOKEN'))
-            ->get(
-                self::QIITA_BASE_URL . $qiita_url_path
-            );
+        $response = # ここを実装してください
         # 以下の$statusをddで200になっていれば問2はクリアです
         $status = $response->status();
 

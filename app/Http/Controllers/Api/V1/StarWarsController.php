@@ -16,7 +16,7 @@ class StarWarsController extends Controller
      */
     public function __invoke(): JsonResponse
     {
-        $response = Http::get("https://swapi.dev/api/films/1/")->json();
+        $response = # ここを実装してください
         return response()->json([
             'title' => $response["title"],
             'release_date' => $response["release_date"],
