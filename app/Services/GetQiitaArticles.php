@@ -14,6 +14,7 @@ class GetQiitaArticles implements GetQiitaArticlesInterface
 
     public function __construct(CreateQiitaArticlesInterface $create_qiita_article)
     {
+        # $this->create_qiita_articleにモックを代入することになる
         $this->create_qiita_article = $create_qiita_article;
     }
 

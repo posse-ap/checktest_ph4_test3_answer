@@ -42,7 +42,7 @@ test_get_request内に以下を確認するテストを書いてください
 
 ### 問4 FeatureテストをMockeryを使って書いてみよう
 
-App\Http\Controllers\Api\V1\Qiita\Articles\IndexControllerにある問3に関するTODOコメントを確認してください
+App\Http\Controllers\Api\V1\Qiita\Articles\IndexControllerにある問4に関するTODOコメントを確認してください
 
 ### 問5 GetQiitaArticlesのテストを書こう
 
