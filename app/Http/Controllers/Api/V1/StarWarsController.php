@@ -16,7 +16,9 @@ class StarWarsController extends Controller
      */
     public function __invoke(): JsonResponse
     {
-        $response = ''; # ここを実装してください
+        // TODO: ここを実装してください
+        // https://swapi.dev/api/films/1 にリクエストを送る
+        $response = '';
         return response()->json([
             'title' => $response["title"],
             'release_date' => $response["release_date"],

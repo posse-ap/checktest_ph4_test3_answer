@@ -40,7 +40,7 @@ vendor/bin/sail stop
 
 テストが通れば合っています
 
-テストコマンド
+テストコマンド（コンテナが起動している必要があります）
 ```
 vendor/bin/sail test tests/Feature/Api/V1/StarWarsControllerTest.php
 ```

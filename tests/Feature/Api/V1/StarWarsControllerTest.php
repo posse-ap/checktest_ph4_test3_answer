@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Api\V1\Qiita\Articles;
+namespace Tests\Feature\Api\V1;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Symfony\Component\HttpFoundation\Response;
