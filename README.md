@@ -5,16 +5,31 @@
 本アプリケーションは[Laravel Sail](https://readouble.com/laravel/8.x/ja/sail.html) を利用しています
 
 ## 準備
-
-.envファイルを作成しに設定をコピペしてください
-.env.testingファイルを作成し設定をコピペしてください
-
-プロジェクトルートディレクトリで
-
 ```
-.vendor/bin/sail up
+// ソースコードをクローンする
+git clone git@github.com:posse-ap/checktest_ph4_test3.git
+
+// プロジェクトルートへ移動
+cd checktest_ph4_test3
+
+// .env, .env.testingファイルを作成し、設定をコピペする
+cp .env.example .env
+cp .env.example .env.testing
 ```
-をすることでコンテナが起動します
+
+コンテナを起動するのですが、本アプリケーションはLaravel Sail を利用しています。
+事前にPCに composer をインストールしておく必要があります。
+```
+composer require laravel/sail --dev
+vendor/bin/sail up -d
+```
+
+http://localhost/　にアクセスするとLaravelの画面が表示されます。
+
+コンテナを停止したい場合は以下のコマンドを実施
+```
+vendor/bin/sail stop
+```
 
 ## 問題
 
