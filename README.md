@@ -35,8 +35,12 @@ vendor/bin/sail stop
 
 ### 問1 外部APIを使ってみる
 
-1. App\Http\Controllers\Api\V1\StarWarsControllerの__invokeを実装する
+1. App\Http\Controllers\Api\V1\StarWarsControllerの__invokeを実装する（TODOコメント）
 2. StarWarsControllerに関するテストを流してみる
+
+**ポイント**
+- 必要な情報はこちらから取得できます（https://swapi.dev/api/films/1）
+- Http ClientとしてはGuzzleを使ってください（https://readouble.com/laravel/8.x/ja/http-client.html）
 
 テストが通れば合っています
 
