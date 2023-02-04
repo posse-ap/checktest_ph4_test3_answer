@@ -4,6 +4,7 @@ namespace Tests\Feature\Api\V1\Qiita\Articles;
 
 use App\Models\QiitaArticle;
 use App\Services\GetQiitaArticles;
+use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\TestCase;
@@ -22,7 +23,12 @@ class IndexControllerTest extends TestCase
     # TODO 問3
     public function test_get_request()
     {
-        # ここを実装してください
+        // ここを実装してください
+        // 1. qiita_articles テーブルのレコードが0件であること
+        // 2. http://localhost/api/api/v1/qiita/articles にリクエストを送信する
+        // 3. レスポンスステータスが期待通り（201）であること
+        // 4. レスポンスが期待通りであること
+        // 5. qiita_articles テーブルのレコードにX件登録されていること
     }
 
     public function test_return_value_when_request_success()
@@ -45,10 +51,12 @@ class IndexControllerTest extends TestCase
         ]);
     }
 
+    # TODO 問4 テスト実装部分
     public function test_return_value_when_request_failed()
     {
-        # TODO 問3 テスト実装部分
-        # 上のtest_return_value_when_request_successを参考にMockeryを使いテストを書いてください
-        # ここを実装してください
+        // 1. `$this->getQiitaArticles->execute()`の処理で例外を吐くモックを作成する
+        // 2. http://localhost/api/api/v1/qiita/articles にリクエストを送信する
+        // 3. レスポンスステータスが期待通り（201）であること
+        // 4. レスポンスが期待通りであること
     }
 }

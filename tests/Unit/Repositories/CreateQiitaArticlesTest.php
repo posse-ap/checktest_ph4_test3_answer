@@ -20,7 +20,10 @@ class CreateQiitaArticlesTest extends TestCase
     # $articles_dataが空のCollectionの時、1件も登録されていないことをUnitテストで担保してください
     public function test_empty_collection_given()
     {
-        # ここを実装してください
+        // ここを実装してください
+        // 1. qiita_articlesテーブルにレコードが登録されていないことを確認
+        // 2. CreateQiitaArticlesのexecuteメソッドの引数に殻のコレクションを渡して実行
+        // 3. qiita_articlesテーブルにレコードが登録されていないことを確認
     }
 
     # TODO 問6
@@ -28,5 +31,8 @@ class CreateQiitaArticlesTest extends TestCase
     public function test_not_empty_collection_given()
     {
         # ここを実装してください
+        // 1. qiita_articlesテーブルにレコードが登録されていないことを確認
+        // 2. CreateQiitaArticlesのexecuteメソッドの引数に3つの値を含むコレクションを渡して実行
+        // 3. qiita_articlesテーブルにレコードが3件登録されていることを確認
     }
 }

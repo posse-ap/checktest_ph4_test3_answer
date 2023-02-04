@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Services\Interfaces\GetQiitaArticlesInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 
 class IndexController extends Controller
 {
@@ -36,9 +37,6 @@ class IndexController extends Controller
                 'status' => Response::HTTP_CREATED,
             ], Response::HTTP_CREATED);
         } catch (\Exception $error) {
-            # TODO 問4: $this->getQiitaArticles->execute()がエラーを起こした時、
-            # statusが期待通りであることをFeatureテストで担保してください
-            # tests/Feature/Api/V1/Qiita/Articles/IndexControllerTest.phpのtest_return_value_when_request_failedにテストを書いてください
             return response()->json([
                 'message' => $error->getMessage(),
                 'status' => $error->getCode(),
