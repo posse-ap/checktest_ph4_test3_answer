@@ -31,12 +31,10 @@ class GetQiitaArticles implements GetQiitaArticlesInterface
     public function execute(string $qiita_url_path = 'authenticated_user/items'): void
     {
         # TODO 問2: 以下のリンク先にあるapiを呼び出してQiita記事を取得してください
-        # base urlはL14行目に定義しているので、文字列連結して使ってください
+        # base urlはL13行目に定義しているので、文字列連結して使ってください
         # ex: self::QIITA_BASE_URL . $qiita_url_path
         # tokenをセットする必要があるので、調べて設定してください
         # tokenは別途お渡しします
-        # Http ClientとしてはGuzzleを使ってください
-        # 参考: https://readouble.com/laravel/8.x/ja/http-client.html
         $response = # ここを実装してください
         # 以下の$statusをddで200になっていれば問2はクリアです
         $status = $response->status();
