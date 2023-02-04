@@ -33,13 +33,6 @@ vendor/bin/sail stop
 ### 問1 外部APIを使ってみる
 
 1. App\Http\Controllers\Api\V1\StarWarsControllerの__invokeを実装する
-<<<<<<< Updated upstream
-2. StarWarsControllerに関するテストを流してみる
-
-テストが通れば合っています
-
-テストコマンド
-=======
     - https://swapi.dev/api/films/1 に GET リクエストを送り、レスポンスを受け取る処理を記述してください。また、外部APIにリクエストを送信する処理は [Guzzle](https://readouble.com/laravel/8.x/ja/http-client.html) を利用してください
 2. StarWarsControllerに関するテストを流してみる
 
@@ -47,7 +40,6 @@ vendor/bin/sail stop
 **確認方法**
 
 テストが通れば合っています。以下、テストコマンド（コンテナが起動している必要があります）
->>>>>>> Stashed changes
 ```
 vendor/bin/sail test tests/Feature/Api/V1/StarWarsControllerTest.php
 ```
