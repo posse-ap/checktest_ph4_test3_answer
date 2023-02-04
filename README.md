@@ -9,12 +9,20 @@
 - ローカルに Composer をインストールする
 
 ## 準備
+```
+// ソースコードをクローンする
+git clone git@github.com:posse-ap/checktest_ph4_test3.git
 
-.envファイルを作成しに設定をコピペしてください
-.env.testingファイルを作成し設定をコピペしてください
+// プロジェクトルートへ移動
+cd checktest_ph4_test3
 
-プロジェクトルートディレクトリで
+// .env, .env.testingファイルを作成し、設定をコピペする
+cp .env.example .env
+cp .env.example .env.testing
+```
 
+コンテナを起動するのですが、本アプリケーションはLaravel Sail を利用しています。
+事前にPCに composer をインストールしておく必要があります。
 ```
 composer install
 vendor/bin/sail up -d
@@ -26,7 +34,6 @@ http://localhost/ にアクセスするとLaravelの画面が表示されます�
 ```
 vendor/bin/sail stop
 ```
-をすることでコンテナが起動します
 
 ## 問題
 
