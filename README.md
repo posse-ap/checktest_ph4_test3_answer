@@ -5,7 +5,7 @@
 本アプリケーションは[Laravel Sail](https://readouble.com/laravel/8.x/ja/sail.html) を利用しています
 
 ## 事前用意
-- Qiitaのトークンはこちらを利用してください（`050cca5b3b6504353e5a7fa11deb918f1ffd0113`）
+- Qiitaのトークンを用意する
 - ローカルに Composer をインストールする
 
 ## 準備
