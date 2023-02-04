@@ -16,7 +16,8 @@ class StarWarsController extends Controller
      */
     public function __invoke(): JsonResponse
     {
-        $response = # ここを実装してください
+        // TODO: 問1: ここを実装してください
+        $response = '';
         return response()->json([
             'title' => $response["title"],
             'release_date' => $response["release_date"],

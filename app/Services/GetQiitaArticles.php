@@ -5,6 +5,7 @@ namespace App\Services;
 use Illuminate\Support\Facades\Http;
 use App\Repositories\Interfaces\CreateQiitaArticlesInterface;
 use App\Services\Interfaces\GetQiitaArticlesInterface;
+use Illuminate\Support\Facades\Log;
 use \Symfony\Component\HttpFoundation\Response;
 
 class GetQiitaArticles implements GetQiitaArticlesInterface
@@ -31,26 +32,15 @@ class GetQiitaArticles implements GetQiitaArticlesInterface
     public function execute(string $qiita_url_path = 'authenticated_user/items'): void
     {
         # TODO 問2: 以下のリンク先にあるapiを呼び出してQiita記事を取得してください
-        # base urlはL14行目に定義しているので、文字列連結して使ってください
-        # ex: self::QIITA_BASE_URL . $qiita_url_path
-        # tokenをセットする必要があるので、調べて設定してください
-        # tokenは別途お渡しします
-        # Http ClientとしてはGuzzleを使ってください
-        # 参考: https://readouble.com/laravel/8.x/ja/http-client.html
-        $response = # ここを実装してください
-        # 以下の$statusをddで200になっていれば問2はクリアです
+        $response = '';
         $status = $response->status();
 
         if ($status === Response::HTTP_OK) {
-            # TODO 問5 $status === Response::HTTP_OKを満たす時、mockを使い、
-            # executeが呼ばれることをUnitテストで担保してください
             $this->create_qiita_article->execute(collect($response->json()));
         } else {
-            # TODO 問6 $status === Response::HTTP_OKを満たさない時、mockを使い、
-            # create_qiita_articleのexecuteが呼ばれないことをUnitテストで担保してください
-            # また例外が投げられることをUnitテストで担保してください
             $response->throw()->json();
         }
     }
 
 }
+
